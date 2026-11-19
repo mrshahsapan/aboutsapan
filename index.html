@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sapan Shah | Entrepreneur, Business Professional & Technology Enthusiast</title>
+<meta name="description" content="Sapan Shah, entrepreneur. Founder of Navkar Trade Hub, Brand Owner and Co-Founder of TheSizelly, Co-owner of The House of Makeba Surat branch, and Designated Partner of Thom Ventures LLP.">
+<meta name="author" content="Sapan Shah">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#080a10; --panel:#10131c; --panel2:#151927; --ink:#ecebe6; --muted:#9a9fb2; --line:#222737;
+  --gold:#d4af6a; --gold2:#f2dba2; --accent:#d4af6a;
+  --display:'Fraunces',Georgia,'Times New Roman',serif;
+  --body:'Manrope','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px;background:var(--bg)}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.7;overflow-x:hidden;position:relative;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1120px,90%);margin:auto;position:relative;z-index:1}
+
+/* ambient light */
+.glow{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.glow i{position:absolute;border-radius:50%;filter:blur(110px);opacity:.28}
+.glow i:nth-child(1){width:520px;height:520px;background:#3a2c0e;top:-120px;right:-80px;animation:drift 22s ease-in-out infinite alternate}
+.glow i:nth-child(2){width:480px;height:480px;background:#14204a;bottom:-140px;left:-120px;animation:drift 28s ease-in-out infinite alternate-reverse}
+@keyframes drift{to{transform:translate(-60px,50px)}}
+
+/* top bar */
+header.bar{position:sticky;top:0;z-index:50;background:rgba(8,10,16,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;min-height:64px;gap:16px}
+.mark{font-family:var(--display);font-weight:600;font-size:20px;text-decoration:none;letter-spacing:.01em}
+.mark b{color:var(--gold);font-weight:600}
+.bar nav{display:flex;gap:26px}
+.bar nav a{text-decoration:none;font-size:14px;font-weight:500;color:var(--muted);transition:color .2s}
+.bar nav a:hover{color:var(--gold2)}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2))}
+
+/* hero */
+.hero{padding:clamp(64px,10vw,130px) 0 80px}
+.live{display:inline-flex;gap:10px;align-items:center;font-size:13px;color:var(--muted);border:1px solid var(--line);background:var(--panel);padding:7px 15px;border-radius:99px}
+.live i{width:7px;height:7px;border-radius:50%;background:#35c47a;box-shadow:0 0 10px #35c47a;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.3}}
+h1.name{font-family:var(--display);font-weight:800;font-size:clamp(58px,13vw,168px);line-height:.95;letter-spacing:-.04em;margin:28px 0 10px;
+  background:linear-gradient(100deg,#8b6a2e 0%,var(--gold) 28%,var(--gold2) 50%,var(--gold) 72%,#8b6a2e 100%);background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:sheen 7s ease-in-out infinite alternate}
+@keyframes sheen{to{background-position:100% 0}}
+.role-line{font-family:var(--display);font-size:clamp(22px,3.2vw,36px);font-weight:400;color:var(--ink);min-height:1.35em}
+.role-line b{color:var(--gold2);font-weight:600}
+.caret{display:inline-block;width:2px;height:.85em;background:var(--gold);margin-left:4px;vertical-align:-.05em;animation:pulse 1s infinite}
+.lead{max-width:620px;color:var(--muted);font-size:17px;margin-top:22px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-block;padding:14px 28px;border-radius:4px;font-weight:600;font-size:14px;letter-spacing:.02em;text-decoration:none;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1405;transition:transform .2s,box-shadow .3s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(212,175,106,.55)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid #394058}
+.btn.ghost:hover{border-color:var(--gold);box-shadow:none}
+
+/* sector ticker */
+.ticker{border-block:1px solid var(--line);background:rgba(16,19,28,.7);overflow:hidden;position:relative;z-index:1}
+.ticker div{display:flex;gap:56px;width:max-content;padding:16px 0;animation:scroll 38s linear infinite;color:var(--muted);font-family:var(--display);font-size:20px}
+.ticker span::after{content:"◆";color:var(--gold);font-size:9px;margin-left:56px;vertical-align:3px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:96px 0;position:relative}
+h2.title{font-family:var(--display);font-size:clamp(34px,5vw,54px);font-weight:600;letter-spacing:-.02em;line-height:1.08;margin-bottom:12px}
+.sub{color:var(--muted);max-width:560px;margin-bottom:44px}
+
+/* switcher */
+.switcher{display:grid;grid-template-columns:minmax(260px,.8fr) 1.5fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel);box-shadow:0 40px 80px -50px #000}
+.tabs{display:flex;flex-direction:column;border-right:1px solid var(--line);background:rgba(8,10,16,.35)}
+.tab{all:unset;box-sizing:border-box;cursor:pointer;padding:24px 26px;border-bottom:1px solid var(--line);position:relative;transition:background .3s;display:block}
+.tab:last-child{border-bottom:0}
+.tab strong{display:block;font-family:var(--display);font-size:21px;font-weight:600;letter-spacing:-.01em}
+.tab span{font-size:13px;color:var(--muted)}
+.tab::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--accent);transition:width .3s,background .4s}
+.tab[aria-selected="true"]{background:var(--panel2)}
+.tab[aria-selected="true"]::before{width:4px}
+.tab:hover{background:rgba(255,255,255,.03)}
+.tab:focus-visible{outline-offset:-3px}
+.panel{padding:clamp(28px,4vw,58px);display:flex;flex-direction:column;justify-content:center;min-height:380px;transition:background .6s;
+  background:radial-gradient(circle at 100% 0,color-mix(in srgb,var(--accent) 20%,transparent),transparent 58%)}
+.panel .tag{align-self:flex-start;border:1px solid color-mix(in srgb,var(--accent) 60%,transparent);color:var(--accent);padding:5px 14px;border-radius:99px;font-size:13px;font-weight:600;transition:color .4s,border-color .4s}
+.panel h3{font-family:var(--display);font-size:clamp(34px,5vw,58px);font-weight:600;letter-spacing:-.03em;line-height:1.02;margin:20px 0 14px}
+.panel p{color:var(--muted);max-width:520px;font-size:17px}
+.panel .links{margin-top:26px;display:flex;gap:22px;flex-wrap:wrap}
+.panel .links a{font-weight:600;color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.panel.swap > *{animation:swap .45s cubic-bezier(.2,.7,.2,1) both}
+.panel.swap > *:nth-child(2){animation-delay:.05s}.panel.swap > *:nth-child(3){animation-delay:.1s}.panel.swap > *:nth-child(4){animation-delay:.15s}
+@keyframes swap{from{opacity:0;transform:translateY(14px)}}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:start}
+.about p{color:var(--muted);margin-bottom:16px;font-size:17px;max-width:60ch}
+.facts{border-top:1px solid var(--line)}
+.facts div{display:flex;justify-content:space-between;gap:18px;padding:19px 0;border-bottom:1px solid var(--line)}
+.facts dt{color:var(--muted)}.facts dd{font-weight:600;text-align:right;color:var(--gold2)}
+
+/* tech */
+.tech{background:linear-gradient(180deg,rgba(16,19,28,.8),rgba(10,12,19,.8));border-block:1px solid var(--line)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:9px 18px;border-radius:99px;font:600 13px var(--body);cursor:pointer;transition:.25s}
+.chip:hover{color:var(--ink);border-color:#394058}
+.chip[aria-pressed="true"]{background:var(--gold);color:#1a1405;border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{position:relative;padding:28px;border-radius:12px;border:1px solid var(--line);background:var(--panel);overflow:hidden;transition:opacity .35s,transform .35s,border-color .3s}
+.card::after{content:"";position:absolute;inset:0;background:radial-gradient(280px circle at var(--mx,50%) var(--my,0%),rgba(212,175,106,.16),transparent 70%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover{border-color:rgba(212,175,106,.5)}.card:hover::after{opacity:1}
+.card h3{font-family:var(--display);font-size:20px;font-weight:600;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+.card.off{opacity:.1;transform:scale(.97);pointer-events:none}
+
+/* contact */
+.contact{text-align:center;padding:120px 0}
+.contact p{margin:0 auto 34px;color:var(--muted);max-width:520px}
+footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:var(--muted);font-size:13px;position:relative;z-index:1}
+
+@media(max-width:860px){
+  .bar nav{gap:16px}.bar nav a{font-size:12px}
+  .switcher{grid-template-columns:1fr}
+  .tabs{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}
+  .tab{min-width:210px;border-bottom:0;border-right:1px solid var(--line)}
+  .tab::before{top:auto;height:0;width:100%;transition:height .3s}
+  .tab[aria-selected="true"]::before{width:100%;height:4px}
+  .about,.grid{grid-template-columns:1fr}
+  section{padding:68px 0}
+}
+@media(max-width:520px){.bar nav a:nth-child(n+3){display:none}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<div class="glow" aria-hidden="true"><i></i><i></i></div>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top">Sapan <b>Shah</b></a>
+    <nav aria-label="Main">
+      <a href="#business">Businesses</a>
+      <a href="#about">About</a>
+      <a href="#technology">Technology</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main id="top">
+
+<div class="hero">
+  <div class="wrap">
+    <div class="live"><i></i><span id="clock">Surat, Gujarat</span></div>
+    <h1 class="name">Sapan Shah</h1>
+    <div class="role-line">Building <b id="typed"></b><span class="caret"></span></div>
+    <p class="lead">An entrepreneur and business professional from Surat, Gujarat, India, with ventures across trading, fashion, hospitality and business partnerships, and a hands-on interest in technology, automation and business development.</p>
+    <div class="cta">
+      <a class="btn" href="#business">Explore the businesses</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/mrshahsapan" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<div class="ticker" aria-hidden="true">
+  <div>
+    <span>Trading</span><span>Women's fashion</span><span>Hospitality</span><span>Business partnerships</span><span>DevOps</span><span>Automation</span>
+    <span>Trading</span><span>Women's fashion</span><span>Hospitality</span><span>Business partnerships</span><span>DevOps</span><span>Automation</span>
+  </div>
+</div>
+
+<section id="business">
+  <div class="wrap">
+    <h2 class="title">Four ventures, one desk.</h2>
+    <p class="sub">Select a business to see Sapan's role and what the company does.</p>
+    <div class="switcher">
+      <div class="tabs" role="tablist" aria-label="Businesses" id="tabs"></div>
+      <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <h2 class="title">About</h2>
+      <p>Sapan Shah is an entrepreneur and business professional based in Surat, Gujarat, India. His work reflects an interest in entrepreneurship, business development, brand creation and operational management.</p>
+      <p>His ventures span trading, women's fashion and hospitality. Beyond business, he works with DevOps practices, automation, cloud environments and software deployment workflows.</p>
+      <p>He enjoys spotting opportunities, improving operational processes, building sustainable business models and finding ways technology can support growth.</p>
+    </div>
+    <dl class="facts">
+      <div><dt>Based in</dt><dd>Surat, Gujarat, India</dd></div>
+      <div><dt>Founder</dt><dd>Navkar Trade Hub</dd></div>
+      <div><dt>Brand owner</dt><dd>TheSizelly</dd></div>
+      <div><dt>Co-owner</dt><dd>The House of Makeba, Surat</dd></div>
+      <div><dt>Designated partner</dt><dd>Thom Ventures LLP</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="tech" id="technology">
+  <div class="wrap">
+    <h2 class="title">The technical side.</h2>
+    <p class="sub">Alongside the businesses, Sapan explores deployment workflows, manages environments and improves operational processes.</p>
+    <div class="filters" id="filters" role="group" aria-label="Filter technology areas"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="title">Let's talk.</h2>
+    <p>For business enquiries, collaborations and networking, reach out on LinkedIn.</p>
+    <a class="btn" href="https://www.linkedin.com/in/mrshahsapan" target="_blank" rel="noopener noreferrer">View LinkedIn profile</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year"></span> Sapan Shah. All rights reserved.<br>Entrepreneur | Business Professional | Surat, Gujarat, India</div>
+</footer>
+
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var current = 0;
+
+  var ventures = [
+    {id:'trade', name:'Navkar Trade Hub', role:'Founder', kind:'Trading', color:'#3fd0d2',
+     text:'Trading and business operations, focused on business development, commercial opportunities and day-to-day operational activity.', links:[]},
+    {id:'sizelly', name:'TheSizelly', role:'Brand Owner & Co-Founder', kind:'Fashion', color:'#ff7fae',
+     text:"A women's fashion brand built around modern styles, quality, comfort and affordable everyday fashion, with contemporary wardrobe essentials.",
+     links:[['Amazon Store','https://tinyurl.com/thesizelly-amazon-store'],['Instagram','https://www.instagram.com/thesizelly?stkn=MXNrM3Q3ZTZ1eTd0bA==']]},
+    {id:'makeba', name:'The House of Makeba', role:'Co-owner, Surat branch', kind:'Hospitality', color:'#f5b947',
+     text:'Co-owner of the Surat branch of The House of Makeba, working in hospitality and restaurant operations.', links:[]},
+    {id:'thom', name:'Thom Ventures LLP', role:'Designated Partner', kind:'Partnership', color:'#a49eff',
+     text:'Designated Partner in a professional business partnership.', links:[]}
+  ];
+  var tech = [
+    ['DevOps & CI/CD','Jenkins automation, CI/CD pipelines, deployment workflows and build management.','Pipelines'],
+    ['Docker & Containers','Containerized applications, Docker deployments, image management and environment configuration.','Pipelines'],
+    ['Linux & Infrastructure','Linux server administration, system maintenance, SSH, server configuration and infrastructure operations.','Servers'],
+    ['Cloud & Virtualization','Cloud infrastructure, virtual machines, server provisioning and environment management.','Servers'],
+    ['Web & Server Operations','Nginx configuration, reverse proxies, application deployment, SSL and server-side troubleshooting.','Servers'],
+    ['Automation & APIs','Python-based APIs, automation workflows and dynamic infrastructure dashboards.','Code']
+  ];
+
+  /* In-page links: scroll manually so they work inside the Google Sites iframe */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var t = document.querySelector(a.getAttribute('href'));
+    if (t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); }
+  });
+
+  /* Venture switcher */
+  var tabs = $('tabs'), panel = $('panel');
+  ventures.forEach(function(v, i){
+    var b = document.createElement('button');
+    b.className = 'tab'; b.setAttribute('role','tab'); b.id = 'tab-' + v.id;
+    b.innerHTML = '<strong></strong><span></span>';
+    b.firstChild.textContent = v.name; b.lastChild.textContent = v.role;
+    b.addEventListener('click', function(){ select(i, true); });
+    b.addEventListener('keydown', function(e){
+      var n = null;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') n = (i + 1) % ventures.length;
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') n = (i - 1 + ventures.length) % ventures.length;
+      if (n !== null){ e.preventDefault(); select(n, true); tabs.children[n].focus(); }
+    });
+    tabs.appendChild(b);
+  });
+
+  function select(i, animate){
+    current = i;
+    var v = ventures[i];
+    document.querySelector('.switcher').style.setProperty('--accent', v.color);
+    Array.prototype.forEach.call(tabs.children, function(t, k){
+      t.setAttribute('aria-selected', k === i);
+      t.tabIndex = k === i ? 0 : -1;
+    });
+    panel.setAttribute('aria-labelledby', 'tab-' + v.id);
+    panel.innerHTML = '<span class="tag"></span><h3></h3><p></p><div class="links"></div>';
+    panel.children[0].textContent = v.kind + ' · ' + v.role;
+    panel.children[1].textContent = v.name;
+    panel.children[2].textContent = v.text;
+    v.links.forEach(function(l){
+      var a = document.createElement('a'); a.href = l[1]; a.textContent = l[0];
+      a.target = '_blank'; a.rel = 'noopener noreferrer';
+      panel.children[3].appendChild(a);
+    });
+    if (animate){ panel.classList.remove('swap'); void panel.offsetWidth; panel.classList.add('swap'); }
+  }
+
+  /* Tech filter */
+  var grid = $('grid'), filters = $('filters');
+  tech.forEach(function(t){
+    var c = document.createElement('div'); c.className = 'card'; c.dataset.cat = t[2];
+    c.innerHTML = '<h3></h3><p></p>';
+    c.firstChild.textContent = t[0]; c.lastChild.textContent = t[1];
+    c.addEventListener('pointermove', function(e){
+      var r = c.getBoundingClientRect();
+      c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+    grid.appendChild(c);
+  });
+  ['All','Pipelines','Servers','Code'].forEach(function(name, i){
+    var b = document.createElement('button'); b.className = 'chip'; b.textContent = name;
+    b.setAttribute('aria-pressed', i === 0);
+    b.addEventListener('click', function(){
+      Array.prototype.forEach.call(filters.children, function(x){ x.setAttribute('aria-pressed', x === b); });
+      Array.prototype.forEach.call(grid.children, function(c){
+        c.classList.toggle('off', name !== 'All' && c.dataset.cat !== name);
+      });
+    });
+    filters.appendChild(b);
+  });
+
+  /* Typing line */
+  var words = ['businesses.','brands.','restaurants.','pipelines.','things that scale.'];
+  var typed = $('typed'), wi = 0, ci = 0, del = false;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function tick(){
+    var w = words[wi];
+    if (reduce){ typed.textContent = words[0]; return; }
+    typed.textContent = w.slice(0, ci);
+    if (!del && ci === w.length){ del = true; return setTimeout(tick, 1600); }
+    if (del && ci === 0){ del = false; wi = (wi + 1) % words.length; }
+    ci += del ? -1 : 1;
+    setTimeout(tick, del ? 35 : 80);
+  }
+
+  /* Surat clock */
+  function clock(){
+    try {
+      var t = new Date().toLocaleTimeString('en-IN', {hour:'2-digit', minute:'2-digit', hour12:true, timeZone:'Asia/Kolkata'});
+      $('clock').textContent = 'Surat, Gujarat · ' + t + ' IST';
+    } catch(e){}
+  }
+  clock(); setInterval(clock, 30000);
+
+  /* Scroll progress */
+  var bar = $('progress');
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + '%';
+  }, {passive:true});
+
+  $('year').textContent = new Date().getFullYear();
+  select(0, false); tick();
+})();
+</script>
+</body>
+</html>
