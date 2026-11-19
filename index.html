@@ -3,9 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sapan Shah | Entrepreneur, Business Professional & Technology Enthusiast</title>
-<meta name="description" content="Sapan Shah, entrepreneur. Founder of Navkar Trade Hub, Brand Owner and Co-Founder of TheSizelly, Co-owner of The House of Makeba Surat branch, and Designated Partner of Thom Ventures LLP.">
+<title>Sapan Shah | Founder, Investor & Business Leader</title>
+<meta name="description" content="Sapan Shah is a founder and investor based in Surat, India, building businesses across trading, fashion and hospitality with a focus on thoughtful growth and long-term value.">
 <meta name="author" content="Sapan Shah">
+<meta name="theme-color" content="#080a10">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sapan Shah | Founder, Investor & Business Leader">
+<meta property="og:description" content="Building businesses across trading, fashion and hospitality, with an interest in technology and long-term value creation.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23080a10'/><text x='32' y='43' text-anchor='middle' font-family='Georgia' font-size='34' font-weight='700' fill='%23d4af6a'>S</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sapan Shah",
+  "jobTitle": "Founder, Investor and Business Partner",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Surat",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN"
+  },
+  "email": "mrshahsapan@gmail.com",
+  "telephone": "+91-85531-43196",
+  "sameAs": ["https://www.linkedin.com/in/mrshahsapan"]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +46,8 @@ html{scroll-behavior:smooth;scroll-padding-top:76px;background:var(--bg)}
 body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.7;overflow-x:hidden;position:relative;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.skip-link{position:fixed;top:10px;left:10px;z-index:100;padding:10px 16px;background:var(--gold2);color:#1a1405;transform:translateY(-160%);transition:transform .2s}
+.skip-link:focus{transform:translateY(0)}
 .wrap{width:min(1120px,90%);margin:auto;position:relative;z-index:1}
 
 /* ambient light */
@@ -38,16 +63,20 @@ header.bar{position:sticky;top:0;z-index:50;background:rgba(8,10,16,.82);backdro
 .mark{font-family:var(--display);font-weight:600;font-size:20px;text-decoration:none;letter-spacing:.01em}
 .mark b{color:var(--gold);font-weight:600}
 .bar nav{display:flex;gap:26px}
-.bar nav a{text-decoration:none;font-size:14px;font-weight:500;color:var(--muted);transition:color .2s}
-.bar nav a:hover{color:var(--gold2)}
+.bar nav a{text-decoration:none;font-size:14px;font-weight:500;color:var(--muted);transition:color .2s;position:relative}
+.bar nav a:hover,.bar nav a[aria-current="location"]{color:var(--gold2)}
+.bar nav a[aria-current="location"]::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:1px;background:var(--gold)}
+.menu-toggle{display:none;border:1px solid var(--line);border-radius:4px;background:var(--panel);color:var(--ink);padding:8px 12px;font:600 13px var(--body);cursor:pointer}
 .progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2))}
 
 /* hero */
-.hero{padding:clamp(64px,10vw,130px) 0 80px}
+.hero{padding:clamp(64px,10vw,130px) 0 88px}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);gap:clamp(36px,7vw,100px);align-items:center}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2);margin-bottom:20px}
 .live{display:inline-flex;gap:10px;align-items:center;font-size:13px;color:var(--muted);border:1px solid var(--line);background:var(--panel);padding:7px 15px;border-radius:99px}
 .live i{width:7px;height:7px;border-radius:50%;background:#35c47a;box-shadow:0 0 10px #35c47a;animation:pulse 2s infinite}
 @keyframes pulse{50%{opacity:.3}}
-h1.name{font-family:var(--display);font-weight:800;font-size:clamp(58px,13vw,168px);line-height:.95;letter-spacing:-.04em;margin:28px 0 10px;
+h1.name{font-family:var(--display);font-weight:800;font-size:clamp(58px,9vw,120px);line-height:.95;letter-spacing:-.04em;margin:24px 0 14px;
   background:linear-gradient(100deg,#8b6a2e 0%,var(--gold) 28%,var(--gold2) 50%,var(--gold) 72%,#8b6a2e 100%);background-size:220% 100%;
   -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:sheen 7s ease-in-out infinite alternate}
 @keyframes sheen{to{background-position:100% 0}}
@@ -60,6 +89,19 @@ h1.name{font-family:var(--display);font-weight:800;font-size:clamp(58px,13vw,168
 .btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(212,175,106,.55)}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid #394058}
 .btn.ghost:hover{border-color:var(--gold);box-shadow:none}
+.hero-card{position:relative;isolation:isolate;padding:24px;border:1px solid rgba(212,175,106,.32);border-radius:16px;background:linear-gradient(145deg,rgba(21,25,39,.94),rgba(12,15,23,.94));box-shadow:0 35px 90px -50px rgba(212,175,106,.45);overflow:hidden}
+.hero-card::before{content:"";position:absolute;inset:-1px;z-index:-1;background:radial-gradient(circle at 50% 0,rgba(212,175,106,.16),transparent 65%)}
+.overview-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.rotation-toggle{border:0;background:none;color:var(--gold2);font:600 11px var(--body);cursor:pointer;letter-spacing:0;text-transform:none}
+.quick-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:16px 0 18px}
+.quick-tab{border:1px solid var(--line);border-radius:7px;background:rgba(8,10,16,.45);color:var(--muted);padding:8px 10px;text-align:left;font:600 12px var(--body);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.quick-tab[aria-selected="true"]{border-color:rgba(212,175,106,.65);background:rgba(212,175,106,.12);color:var(--gold2)}
+.overview-panel{border-top:1px solid var(--line);padding-top:17px;min-height:145px}
+.overview-panel h2{font-family:var(--display);font-size:25px;line-height:1.1;font-weight:600;margin-bottom:8px}
+.overview-panel p{color:var(--muted);font-size:13px;line-height:1.6}
+.overview-link{display:inline-block;margin-top:12px;color:var(--gold2);font-size:12px;font-weight:700;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.overview-panel.swap{animation:cardFlip .4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes cardFlip{from{opacity:0;transform:perspective(700px) rotateY(-12deg) translateX(8px)}to{opacity:1;transform:perspective(700px) rotateY(0) translateX(0)}}
 
 /* sector ticker */
 .ticker{border-block:1px solid var(--line);background:rgba(16,19,28,.7);overflow:hidden;position:relative;z-index:1}
@@ -102,6 +144,16 @@ h2.title{font-family:var(--display);font-size:clamp(34px,5vw,54px);font-weight:6
 .facts div{display:flex;justify-content:space-between;gap:18px;padding:19px 0;border-bottom:1px solid var(--line)}
 .facts dt{color:var(--muted)}.facts dd{font-weight:600;text-align:right;color:var(--gold2)}
 
+/* investment perspective */
+.lens{border-top:1px solid var(--line)}
+.lens-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.lens-card{padding:28px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,rgba(21,25,39,.82),rgba(12,15,23,.82));transition:transform .3s,border-color .3s}
+.lens-card:hover{transform:translateY(-5px);border-color:rgba(212,175,106,.55)}
+.lens-number{font-family:var(--display);color:var(--gold);font-size:14px;letter-spacing:.12em}
+.lens-card h3{font-family:var(--display);font-size:24px;font-weight:600;margin:18px 0 8px}
+.lens-card p{color:var(--muted);font-size:15px}
+.collab-note{max-width:760px;margin:26px 0 20px;color:var(--muted)}
+
 /* tech */
 .tech{background:linear-gradient(180deg,rgba(16,19,28,.8),rgba(10,12,19,.8));border-block:1px solid var(--line)}
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
@@ -118,36 +170,74 @@ h2.title{font-family:var(--display);font-size:clamp(34px,5vw,54px);font-weight:6
 
 /* contact */
 .contact{text-align:center;padding:120px 0}
-.contact p{margin:0 auto 34px;color:var(--muted);max-width:520px}
+.contact p{margin:0 auto 34px;color:var(--muted);max-width:560px}
+.contact-methods{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:1040px;margin:0 auto}
+.contact-method{display:flex;flex-direction:column;gap:5px;padding:22px;text-align:left;text-decoration:none;border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,rgba(21,25,39,.82),rgba(12,15,23,.82));transition:transform .25s,border-color .25s,background .25s}
+button.contact-method{width:100%;font-family:var(--body);color:var(--ink);cursor:pointer}
+.contact-method:hover{transform:translateY(-3px);border-color:rgba(212,175,106,.55);background:var(--panel2)}
+.contact-method span{color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.contact-method strong{font-size:15px;font-weight:600;color:var(--gold2);overflow-wrap:anywhere}
 footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:var(--muted);font-size:13px;position:relative;z-index:1}
+.back-top{position:fixed;right:24px;bottom:24px;z-index:45;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:rgba(16,19,28,.92);color:var(--gold2);font-size:18px;line-height:1;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.25);opacity:0;pointer-events:none;transform:translateY(10px);transition:.25s}
+.back-top.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.motion-ready .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.motion-ready .reveal.visible{opacity:1;transform:translateY(0)}
+.hero-layout{animation:rise .75s both}
 
 @media(max-width:860px){
   .bar nav{gap:16px}.bar nav a{font-size:12px}
+  .hero-layout{grid-template-columns:minmax(0,1fr) minmax(210px,.7fr);gap:28px}
   .switcher{grid-template-columns:1fr}
   .tabs{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}
   .tab{min-width:210px;border-bottom:0;border-right:1px solid var(--line)}
   .tab::before{top:auto;height:0;width:100%;transition:height .3s}
   .tab[aria-selected="true"]::before{width:100%;height:4px}
   .about,.grid{grid-template-columns:1fr}
+  .contact-methods{grid-template-columns:repeat(2,minmax(0,1fr))}
   section{padding:68px 0}
 }
-@media(max-width:520px){.bar nav a:nth-child(n+3){display:none}}
+@media(max-width:680px){
+  .menu-toggle{display:block}
+  .bar .wrap{position:relative}
+  .bar nav{display:none;position:absolute;top:calc(100% - 1px);left:0;right:0;padding:12px 5% 18px;background:rgba(8,10,16,.97);border-bottom:1px solid var(--line);flex-direction:column;gap:0}
+  .bar nav.open{display:flex}
+  .bar nav a{font-size:14px;padding:11px 0}
+  .bar nav a[aria-current="location"]::after{display:none}
+  .hero-layout{grid-template-columns:1fr}
+  .hero-card{max-width:360px}
+  .lens-grid{grid-template-columns:1fr}
+  .contact-methods{grid-template-columns:1fr}
+}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .motion-ready .reveal{opacity:1;transform:none}
+}
+@media print{
+  .glow,.ticker,.bar,.back-top,.cta,.filters{display:none!important}
+  body{background:#fff;color:#111}
+  section,.hero{padding:28px 0}
+  .wrap{width:100%}
+  .hero-card,.lens-card,.card,.contact-method,.facts{break-inside:avoid}
 }
 </style>
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="glow" aria-hidden="true"><i></i><i></i></div>
 
 <header class="bar">
   <div class="wrap">
     <a class="mark" href="#top">Sapan <b>Shah</b></a>
-    <nav aria-label="Main">
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" aria-label="Main">
       <a href="#business">Businesses</a>
+      <a href="#partnerships">Partnerships</a>
       <a href="#about">About</a>
+      <a href="#investment">Investment lens</a>
       <a href="#technology">Technology</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -155,17 +245,25 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
   <div class="progress" id="progress"></div>
 </header>
 
-<main id="top">
+<main id="main-content" tabindex="-1">
 
-<div class="hero">
-  <div class="wrap">
-    <div class="live"><i></i><span id="clock">Surat, Gujarat</span></div>
-    <h1 class="name">Sapan Shah</h1>
-    <div class="role-line">Building <b id="typed"></b><span class="caret"></span></div>
-    <p class="lead">An entrepreneur and business professional from Surat, Gujarat, India, with ventures across trading, fashion, hospitality and business partnerships, and a hands-on interest in technology, automation and business development.</p>
-    <div class="cta">
-      <a class="btn" href="#business">Explore the businesses</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/mrshahsapan" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+<div class="hero" id="top">
+  <div class="wrap hero-layout">
+    <div>
+      <div class="eyebrow">Founder <span aria-hidden="true">·</span> Investor <span aria-hidden="true">·</span> Business partner</div>
+      <div class="live"><i></i><span id="clock">Surat, Gujarat</span></div>
+      <h1 class="name">Sapan Shah</h1>
+      <div class="role-line">Building <b id="typed">businesses.</b><span class="caret" aria-hidden="true"></span></div>
+      <p class="lead">I’m a Surat-based founder and investor building across trading, fashion and hospitality. Explore my businesses, how I think about investment, and the kinds of partnerships I’m open to.</p>
+      <div class="cta">
+        <a class="btn" href="#partnerships">Explore a partnership</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/mrshahsapan" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="Quick guide to Sapan's work">
+      <div class="overview-heading"><span>Explore at a glance</span><button class="rotation-toggle" id="rotation-toggle" type="button" aria-pressed="false">Pause rotation</button></div>
+      <div class="quick-tabs" id="quick-tabs" role="tablist" aria-label="Explore topics"></div>
+      <div class="overview-panel" id="overview-panel" role="tabpanel"></div>
     </div>
   </div>
 </div>
@@ -177,24 +275,50 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
   </div>
 </div>
 
-<section id="business">
+<section id="business" class="reveal">
   <div class="wrap">
     <h2 class="title">Four ventures, one desk.</h2>
     <p class="sub">Select a business to see Sapan's role and what the company does.</p>
     <div class="switcher">
       <div class="tabs" role="tablist" aria-label="Businesses" id="tabs"></div>
-      <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+      <div class="panel" id="business-panel" role="tabpanel" tabindex="0" aria-live="polite"></div>
     </div>
   </div>
 </section>
 
-<section id="about">
+<section id="partnerships" class="lens reveal">
+  <div class="wrap">
+    <h2 class="title">Build what's next—together.</h2>
+    <p class="sub">Good partnerships start with a clear opportunity and aligned expectations. I’m open to exploring:</p>
+    <div class="lens-grid">
+      <article class="lens-card">
+        <span class="lens-number">01 / GROWTH</span>
+        <h3>Business expansion</h3>
+        <p>Explore growth plans across trading, consumer brands and hospitality, with clear roles and complementary strengths.</p>
+      </article>
+      <article class="lens-card">
+        <span class="lens-number">02 / INVESTMENT</span>
+        <h3>Investment opportunities</h3>
+        <p>Start a conversation about the business, its current stage, the opportunity ahead and the kind of partnership you’re seeking.</p>
+      </article>
+      <article class="lens-card">
+        <span class="lens-number">03 / COLLABORATION</span>
+        <h3>Operating partnerships</h3>
+        <p>Discuss practical ways to work together, drawing on experience across business operations, brand building and hospitality.</p>
+      </article>
+    </div>
+    <p class="collab-note">When you reach out, share a little about your business, the opportunity and what you’re looking for in a partner. Every opportunity is considered on its own merits.</p>
+    <a class="btn" href="mailto:mrshahsapan@gmail.com?subject=Partnership%20opportunity%20-%20Sapan%20Shah">Start a conversation</a>
+  </div>
+</section>
+
+<section id="about" class="reveal">
   <div class="wrap about">
     <div>
       <h2 class="title">About</h2>
-      <p>Sapan Shah is an entrepreneur and business professional based in Surat, Gujarat, India. His work reflects an interest in entrepreneurship, business development, brand creation and operational management.</p>
-      <p>His ventures span trading, women's fashion and hospitality. Beyond business, he works with DevOps practices, automation, cloud environments and software deployment workflows.</p>
-      <p>He enjoys spotting opportunities, improving operational processes, building sustainable business models and finding ways technology can support growth.</p>
+      <p>I’m a Surat-based founder and investor with a hands-on interest in how businesses are built and run. My experience spans trading, fashion, hospitality and business partnerships.</p>
+      <p>My roles include founding Navkar Trade Hub, building TheSizelly, co-owning The House of Makeba’s Surat branch and serving as a designated partner at Thom Ventures LLP.</p>
+      <p>Alongside business, I explore DevOps, automation, cloud environments and software deployment workflows—areas that can support better day-to-day operations. I’m interested in thoughtful opportunities where people, goals and expectations are aligned.</p>
     </div>
     <dl class="facts">
       <div><dt>Based in</dt><dd>Surat, Gujarat, India</dd></div>
@@ -206,7 +330,31 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
   </div>
 </section>
 
-<section class="tech" id="technology">
+<section id="investment" class="lens reveal">
+  <div class="wrap">
+    <h2 class="title">An investor's perspective.</h2>
+    <p class="sub">A practical lens shaped by building and operating businesses—grounded in fundamentals, thoughtful growth and long-term value.</p>
+    <div class="lens-grid">
+      <article class="lens-card">
+        <span class="lens-number">01 / PEOPLE</span>
+        <h3>Founder mindset</h3>
+        <p>Back ambitious people who understand their customers and stay close to the work of building.</p>
+      </article>
+      <article class="lens-card">
+        <span class="lens-number">02 / FUNDAMENTALS</span>
+        <h3>Sound businesses</h3>
+        <p>Look for clear customer value, resilient operations and a credible path to sustainable growth.</p>
+      </article>
+      <article class="lens-card">
+        <span class="lens-number">03 / HORIZON</span>
+        <h3>Long-term value</h3>
+        <p>Take a considered view of opportunity, with an appreciation for discipline, patience and execution.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tech reveal" id="technology">
   <div class="wrap">
     <h2 class="title">The technical side.</h2>
     <p class="sub">Alongside the businesses, Sapan explores deployment workflows, manages environments and improves operational processes.</p>
@@ -215,25 +363,38 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="contact reveal" id="contact">
   <div class="wrap">
-    <h2 class="title">Let's talk.</h2>
-    <p>For business enquiries, collaborations and networking, reach out on LinkedIn.</p>
-    <a class="btn" href="https://www.linkedin.com/in/mrshahsapan" target="_blank" rel="noopener noreferrer">View LinkedIn profile</a>
+    <h2 class="title">Start a conversation.</h2>
+    <p>Have a business, investment or partnership opportunity? Share a brief introduction and what you’d like to explore.</p>
+    <div class="contact-methods" aria-label="Contact Sapan Shah">
+      <a class="contact-method" href="mailto:mrshahsapan@gmail.com?subject=Business%20enquiry%20-%20Sapan%20Shah">
+        <span>Email</span><strong>mrshahsapan@gmail.com</strong>
+      </a>
+      <a class="contact-method" href="tel:+918553143196">
+        <span>Phone</span><strong>+91 85531 43196</strong>
+      </a>
+      <a class="contact-method" href="https://www.linkedin.com/in/mrshahsapan" target="_blank" rel="noopener noreferrer">
+        <span>LinkedIn</span><strong>Connect professionally</strong>
+      </a>
+      <button class="contact-method" id="copy-email" type="button" aria-label="Copy email address mrshahsapan@gmail.com">
+        <span>Quick copy</span><strong id="copy-email-label">Copy email address</strong>
+      </button>
+    </div>
   </div>
 </section>
 
 </main>
 
+<button class="back-top" id="back-top" type="button" aria-label="Back to top" title="Back to top">&#8593;</button>
+
 <footer>
-  <div class="wrap">© <span id="year"></span> Sapan Shah. All rights reserved.<br>Entrepreneur | Business Professional | Surat, Gujarat, India</div>
+  <div class="wrap">© <span id="year"></span> Sapan Shah. All rights reserved.<br>Founder | Investor | Business Partner | Surat, Gujarat, India</div>
 </footer>
 
 <script>
 (function(){
   var $ = function(id){ return document.getElementById(id); };
-  var current = 0;
-
   var ventures = [
     {id:'trade', name:'Navkar Trade Hub', role:'Founder', kind:'Trading', color:'#3fd0d2',
      text:'Trading and business operations, focused on business development, commercial opportunities and day-to-day operational activity.', links:[]},
@@ -253,20 +414,133 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
     ['Web & Server Operations','Nginx configuration, reverse proxies, application deployment, SSL and server-side troubleshooting.','Servers'],
     ['Automation & APIs','Python-based APIs, automation workflows and dynamic infrastructure dashboards.','Code']
   ];
+  var overviewItems = [
+    {id:'overview-business',label:'Businesses',title:'What I build',text:'Trading, women’s fashion, hospitality and business partnerships—across four ventures.',link:'#business',linkText:'Explore my businesses'},
+    {id:'overview-partnerships',label:'Partnerships',title:'What I’m open to',text:'Business expansion, investment opportunities and hands-on operating partnerships.',link:'#partnerships',linkText:'Explore partnerships'},
+    {id:'overview-investment',label:'Investment',title:'How I think',text:'A practical, long-term perspective grounded in people, business fundamentals and execution.',link:'#investment',linkText:'View my investment lens'},
+    {id:'overview-contact',label:'About & contact',title:'Let’s connect',text:'Based in Surat, India. Share a little about your business and the opportunity you have in mind.',link:'#contact',linkText:'Start a conversation'}
+  ];
 
   /* In-page links: scroll manually so they work inside the Google Sites iframe */
   document.addEventListener('click', function(e){
     var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
     if (!a) return;
     var t = document.querySelector(a.getAttribute('href'));
-    if (t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); }
+    if (t){
+      e.preventDefault();
+      t.scrollIntoView({behavior:reduceMotion() ? 'auto' : 'smooth', block:'start'});
+    }
   });
 
+  function reduceMotion(){
+    return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  /* Compact navigation on small screens */
+  var menuButton = $('menu-toggle'), nav = $('main-nav');
+  function closeMenu(){
+    menuButton.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('open');
+  }
+  menuButton.addEventListener('click', function(){
+    var open = menuButton.getAttribute('aria-expanded') !== 'true';
+    menuButton.setAttribute('aria-expanded', open);
+    nav.classList.toggle('open', open);
+  });
+  nav.addEventListener('click', function(e){
+    if (e.target.closest('a')) closeMenu();
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  /* Reveal sections as they enter the viewport */
+  if ('IntersectionObserver' in window){
+    if (!reduceMotion()){
+      document.documentElement.classList.add('motion-ready');
+      var revealObserver = new IntersectionObserver(function(entries, observer){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {threshold:.12});
+      document.querySelectorAll('.reveal').forEach(function(el){ revealObserver.observe(el); });
+    }
+    var navLinks = nav.querySelectorAll('a[href^="#"]');
+    var sectionObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function(link){
+          if (link.getAttribute('href') === '#' + entry.target.id) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      });
+    }, {rootMargin:'-25% 0px -65% 0px'});
+    document.querySelectorAll('main section[id]').forEach(function(section){ sectionObserver.observe(section); });
+  }
+
   /* Venture switcher */
-  var tabs = $('tabs'), panel = $('panel');
+  var quickTabs = $('quick-tabs'), overviewPanel = $('overview-panel');
+  var rotationToggle = $('rotation-toggle'), overviewIndex = 0, rotationTimer, rotationPaused = false;
+  if (reduceMotion()) rotationToggle.hidden = true;
+  function showOverview(index, animate){
+    var item = overviewItems[index];
+    overviewIndex = index;
+    Array.prototype.forEach.call(quickTabs.children, function(tab, i){
+      tab.setAttribute('aria-selected', i === index);
+      tab.tabIndex = i === index ? 0 : -1;
+    });
+    overviewPanel.setAttribute('aria-labelledby', item.id);
+    overviewPanel.innerHTML = '<h2></h2><p></p><a class="overview-link"></a>';
+    overviewPanel.children[0].textContent = item.title;
+    overviewPanel.children[1].textContent = item.text;
+    overviewPanel.children[2].href = item.link;
+    overviewPanel.children[2].textContent = item.linkText;
+    if (animate){ overviewPanel.classList.remove('swap'); void overviewPanel.offsetWidth; overviewPanel.classList.add('swap'); }
+  }
+  overviewItems.forEach(function(item, index){
+    var tab = document.createElement('button');
+    tab.className = 'quick-tab'; tab.id = item.id; tab.type = 'button'; tab.role = 'tab';
+    tab.setAttribute('aria-controls', 'overview-panel'); tab.textContent = item.label;
+    tab.addEventListener('click', function(){ showOverview(index, true); });
+    tab.addEventListener('keydown', function(e){
+      var next = null;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = (index + 1) % overviewItems.length;
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = (index - 1 + overviewItems.length) % overviewItems.length;
+      if (e.key === 'Home') next = 0;
+      if (e.key === 'End') next = overviewItems.length - 1;
+      if (next !== null){ e.preventDefault(); showOverview(next, true); quickTabs.children[next].focus(); }
+    });
+    quickTabs.appendChild(tab);
+  });
+  function scheduleOverviewRotation(){
+    window.clearTimeout(rotationTimer);
+    if (rotationPaused || reduceMotion()) return;
+    rotationTimer = window.setTimeout(function(){
+      if (!document.hidden && !document.querySelector('.hero-card:hover') && !document.querySelector('.hero-card :focus-visible')){
+        showOverview((overviewIndex + 1) % overviewItems.length, true);
+      }
+      scheduleOverviewRotation();
+    }, 7000);
+  }
+  rotationToggle.addEventListener('click', function(){
+    rotationPaused = !rotationPaused;
+    rotationToggle.setAttribute('aria-pressed', rotationPaused);
+    rotationToggle.textContent = rotationPaused ? 'Resume rotation' : 'Pause rotation';
+    scheduleOverviewRotation();
+  });
+  document.addEventListener('visibilitychange', scheduleOverviewRotation);
+  showOverview(0, false);
+  scheduleOverviewRotation();
+
+  /* Venture switcher */
+  var tabs = $('tabs'), panel = $('business-panel');
   ventures.forEach(function(v, i){
     var b = document.createElement('button');
     b.className = 'tab'; b.setAttribute('role','tab'); b.id = 'tab-' + v.id;
+    b.setAttribute('aria-controls', 'business-panel');
     b.innerHTML = '<strong></strong><span></span>';
     b.firstChild.textContent = v.name; b.lastChild.textContent = v.role;
     b.addEventListener('click', function(){ select(i, true); });
@@ -274,13 +548,14 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
       var n = null;
       if (e.key === 'ArrowDown' || e.key === 'ArrowRight') n = (i + 1) % ventures.length;
       if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') n = (i - 1 + ventures.length) % ventures.length;
+      if (e.key === 'Home') n = 0;
+      if (e.key === 'End') n = ventures.length - 1;
       if (n !== null){ e.preventDefault(); select(n, true); tabs.children[n].focus(); }
     });
     tabs.appendChild(b);
   });
 
   function select(i, animate){
-    current = i;
     var v = ventures[i];
     document.querySelector('.switcher').style.setProperty('--accent', v.color);
     Array.prototype.forEach.call(tabs.children, function(t, k){
@@ -326,9 +601,9 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
   });
 
   /* Typing line */
-  var words = ['businesses.','brands.','restaurants.','pipelines.','things that scale.'];
-  var typed = $('typed'), wi = 0, ci = 0, del = false;
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var words = ['businesses.','brands.','partnerships.','lasting value.'];
+  var typed = $('typed'), wi = 0, ci = words[0].length, del = false;
+  var reduce = reduceMotion();
   function tick(){
     var w = words[wi];
     if (reduce){ typed.textContent = words[0]; return; }
@@ -350,10 +625,51 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
 
   /* Scroll progress */
   var bar = $('progress');
+  var scrollPending = false;
+  var backTop = $('back-top');
   window.addEventListener('scroll', function(){
-    var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
-    bar.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + '%';
+    if (scrollPending) return;
+    scrollPending = true;
+    window.requestAnimationFrame(function(){
+      var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+      bar.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + '%';
+      backTop.classList.toggle('visible', h.scrollTop > 600);
+      scrollPending = false;
+    });
   }, {passive:true});
+  backTop.addEventListener('click', function(){
+    window.scrollTo({top:0,behavior:reduceMotion() ? 'auto' : 'smooth'});
+  });
+
+  /* Copy-email affordance */
+  var copyEmail = $('copy-email'), copyEmailLabel = $('copy-email-label');
+  copyEmail.addEventListener('click', function(){
+    var email = 'mrshahsapan@gmail.com';
+    function confirmCopy(){
+      copyEmailLabel.textContent = 'Email copied';
+      copyEmail.setAttribute('aria-label', 'Email address copied');
+      window.setTimeout(function(){
+        copyEmailLabel.textContent = 'Copy email address';
+        copyEmail.setAttribute('aria-label', 'Copy email address mrshahsapan@gmail.com');
+      }, 2200);
+    }
+    if (navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(email).then(confirmCopy).catch(function(){
+        copyEmailLabel.textContent = email;
+      });
+    } else {
+      var field = document.createElement('textarea');
+      field.value = email;
+      field.setAttribute('readonly', '');
+      field.style.position = 'fixed';
+      field.style.opacity = '0';
+      document.body.appendChild(field);
+      field.select();
+      try { if (document.execCommand('copy')) confirmCopy(); }
+      catch(e) { copyEmailLabel.textContent = email; }
+      document.body.removeChild(field);
+    }
+  });
 
   $('year').textContent = new Date().getFullYear();
   select(0, false); tick();
